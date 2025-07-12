@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrical Solutions - Professional Electrical & Automation Services</title>
+    <meta name="description" content="Electrical Solutions provides expert electrical services, advanced industrial automation, solar power, CCTV, and IoT smart systems in Karad, Maharashtra. Powering progress with innovation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWTFoEw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="/images/favicon.png"> <style>
+        /* Pro-Level Dark Theme Palette */
+        :root {
+            --primary-dark: #1a1a2e; /* Deep, almost black blue */
+            --primary-light: #20203a; /* Slightly lighter dark blue for sections */
+            --accent-gold: #ffc107; /* Vibrant gold/orange for highlights */
+            --text-light: #e0e0e0; /* Light text for dark backgrounds */
+            --text-dark: #cccccc; /* Muted light text for general content */
+            --border-color: #3a3a5a; /* Border for subtle separation */
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif; /* Default font */
+        }
+        body {
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--primary-dark); /* Dark body background */
+            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .text-center {
+            text-align: center;
+        }
+
+        /* Header with Animation */
+        header {
+            color: white;
+            padding: 2.5rem 0; /* Slightly more padding */
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background-color: var(--primary-dark); /* Fallback */
+            border-bottom: 2px solid var(--border-color); /* Subtle border */
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300%;
+            height: 100%;
+            background: linear-gradient(90deg, #1a1a2e, #20203a, #1a1a2e, #20203a); /* Darker gradient */
+            background-size: 200% 100%;
+            animation: moveGradient 20s linear infinite; /* Slower, smoother animation */
+            z-index: 1;
+        }
+
+        header h1, header .tagline, header p {
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.6); /* More pronounced text shadow */
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem; /* Larger font size */
+            margin-bottom: 0.8rem;
+            font-weight: 800; /* Bolder */
+        }
+        header .tagline {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: var(--accent-gold); /* Tagline in accent color */
+            margin-bottom: 1rem;
+            font-size: 1.4rem; /* Larger tagline */
+        }
+        header p {
+            font-size: 1.15rem;
+            color: var(--text-light); /* Ensure good contrast */
+        }
+
+        /* Keyframes for header gradient animation */
+        @keyframes moveGradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%; /* Moves continuously to the right */
+            }
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--primary-dark); /* Darker nav */
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Stronger shadow */
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 3rem; /* Increased gap */
+        }
+        nav a {
+            color: var(--text-light); /* Light text for nav */
+            text-decoration: none;
+            font-weight: 700; /* Bolder nav links */
+            padding: 0.8rem 1.5rem; /* Increased padding */
+            border-radius: 8px; /* More rounded */
+            transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            position: relative;
+        }
+        nav a::after { /* Underline effect on hover */
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: var(--accent-gold);
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+        nav a:hover::after, nav a:focus::after {
+            width: 100%;
+        }
+        nav a:hover, nav a:focus {
+            color: var(--accent-gold); /* Text color change on hover */
+            background: rgba(255,255,255,0.05); /* Very subtle background on hover */
+        }
+
+        /* Mobile Nav Toggle */
+        .menu-toggle {
+            display: none; /* Hidden by default */
+            font-size: 2rem;
+            color: var(--accent-gold);
+            cursor: pointer;
+            position: absolute;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1001; /* Above nav links */
+        }
+
+        /* Hero Section */
+        .hero {
+            /* Replace 'path/to/your/hero-image.jpg' with your actual image */
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1510525000571-08144b2f2130?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            /* Placeholder for testing: url('https://via.placeholder.com/1920x1080/1a1a2e/ffc107?text=Modern+Electrical+Automation') */
+            color: white;
+            padding: 10rem 2rem; /* More vertical padding */
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh; /* Make it take up more screen height */
+            box-shadow: inset 0 -10px 20px rgba(0,0,0,0.4);
+            border-bottom: 2px solid var(--border-color);
+        }
+        .hero h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4rem; /* Larger hero heading */
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
+            color: white; /* Ensure heading is white */
+        }
+        .hero p {
+            font-size: 1.5rem; /* Larger hero text */
+            max-width: 900px;
+            margin-bottom: 3rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            color: var(--text-light);
+        }
+        .btn {
+            display: inline-block;
+            background: var(--accent-gold); /* Accent gold button */
+            color: var(--primary-dark); /* Dark text on gold */
+            padding: 1.2rem 3rem; /* Larger button */
+            border-radius: 50px; /* Pill shape */
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #e6b000; /* Slightly darker gold on hover */
+            transform: translateY(-5px); /* More pronounced lift */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 3.5rem; /* More spacing between sections */
+            padding: 4rem 2rem; /* More padding */
+            background: var(--primary-light); /* Light dark blue background */
+            border-radius: 12px; /* More rounded corners */
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2); /* Deeper shadow */
+            border: 1px solid var(--border-color); /* Subtle border */
+        }
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem; /* Larger section titles */
+            margin-bottom: 2rem;
+            color: var(--accent-gold); /* Title in accent color */
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+            font-weight: 700;
+        }
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px; /* Wider underline */
+            height: 5px; /* Thicker underline */
+            background: var(--accent-gold);
+            border-radius: 3px;
+        }
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-light); /* Light text for subheadings */
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly larger min-width */
+            gap: 2.5rem; /* Increased gap between cards */
+            margin-top: 2.5rem;
+        }
+        .service-card {
+            background: var(--primary-dark); /* Darker card background */
+            padding: 2.5rem; /* More padding */
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            text-align: center;
+            border-bottom: 6px solid var(--accent-gold); /* Strong accent border */
+            color: var(--text-dark); /* Default text color */
+        }
+        .service-card:hover {
+            transform: translateY(-10px); /* More pronounced lift */
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+            border-color: var(--text-light); /* Change border color on hover */
+        }
+        .service-card i {
+            font-size: 4rem; /* Larger icon */
+            color: var(--accent-gold); /* Accent color for icons */
+            margin-bottom: 2rem;
+        }
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            color: var(--text-light); /* Ensure heading is light */
+        }
+        .service-card ul {
+            list-style: none;
+            text-align: left;
+            margin-left: 1.5rem;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+        }
+        .service-card ul li {
+            margin-bottom: 0.7rem;
+            position: relative;
+            padding-left: 1.8rem;
+        }
+        .service-card ul li::before {
+            content: "\f00c"; /* Font Awesome checkmark */
+            font-family: "Font Awesome 6 Free"; /* Updated font-family for FA 6 */
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold); /* Checkmark in accent color */
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-us .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .why-choose-us .feature-item {
+            background: var(--primary-dark);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            text-align: center;
+            transition: background 0.3s ease, transform 0.3s ease, border-color 0.3s ease; /* Added border-color to transition */
+            border: 1px solid var(--border-color);
+        }
+        .why-choose-us .feature-item:hover {
+            background: var(--primary-light); /* Slight change on hover */
+            transform: translateY(-5px);
+            border-color: var(--accent-gold); /* New: Border color change on hover */
+        }
+        .why-choose-us .feature-item i {
+            font-size: 3rem;
+            color: var(--accent-gold);
+            margin-bottom: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        .why-choose-us .feature-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-light);
+        }
+        .why-choose-us .feature-item p {
+            color: var(--text-dark);
+        }
+
+        /* Contact Info Blocks */
+        .contact-info {
+            background: var(--primary-dark);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem; /* Added margin-bottom */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            border: 1px solid var(--border-color);
+        }
+        .contact-info p,
+        .contact-info a {
+            color: var(--text-light) !important;
+            text-decoration: none;
+            font-size: 1.15rem;
+            margin-bottom: 0.8rem;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+            color: var(--accent-gold) !important;
+        }
+        .contact-info h3 {
+            color: var(--accent-gold);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.8rem;
+            font-size: 2rem;
+        }
+        /* Styling for lists in About section */
+        #about ul {
+            list-style: none; /* Remove default bullet points */
+            margin-left: 0;
+            padding-left: 0;
+            margin-bottom: 1.5rem;
+        }
+        #about ul li {
+            position: relative;
+            padding-left: 1.8rem; /* Space for custom bullet */
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+        #about ul li::before {
+            content: "\f058"; /* Font Awesome check-circle icon */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--accent-gold);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+
+        /* CTA Box */
+        .cta-box {
+            background: var(--accent-gold); /* Gold CTA */
+            color: var(--primary-dark); /* Dark text on gold */
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        .cta-box h3 {
+            color: var(--primary-dark);
+            font-size: 2.5rem;
+            margin-bottom: 1.2rem;
+        }
+        .cta-box p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: var(--primary-dark);
+        }
+        .cta-box .highlight {
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: block;
+            color: var(--primary-dark);
+        }
+
+        /* Skills Chips */
+        .competencies {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            justify-content: center;
+        }
+        .chip {
+            display: inline-block;
+            background: var(--border-color); /* Darker chip background */
+            color: var(--text-light); /* Light text on chip */
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px; /* More rounded */
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.3s ease;
+            border: 1px solid transparent;
+        }
+        .chip:hover {
+            background: var(--accent-gold);
+            color: var(--primary-dark); /* Dark text on hover */
+            transform: translateY(-3px);
+            border-color: var(--primary-dark);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background: var(--primary-dark);
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            border-top: 3px solid var(--accent-gold); /* Accent border */
+            margin-top: 3rem; /* Space from last section */
+        }
+        .footer-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        footer p {
+            margin-bottom: 0.7rem;
+            color: var(--text-dark);
+        }
+
+        /* Animations (for JavaScript) */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px); /* Larger initial translation */
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Slower, smoother transition */
+        }
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 3.5rem;
+            }
+            .hero p {
+                font-size: 1.2rem;
+            }
+            .services-grid, .why-choose-us .feature-list {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 2rem;
+            }
+            section {
+                padding: 3rem 1.5rem;
+            }
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 3rem;
+            }
+            header .tagline {
+                font-size: 1.2rem;
+            }
+            
+            /* Mobile Nav Specifics */
+            nav ul {
+                flex-direction: column;
+                gap: 1.5rem;
+                display: none; /* Hide by default on mobile */
+                padding: 1rem 0;
+                background: var(--primary-dark);
+                position: absolute;
+                top: 100%; /* Below the toggle */
+                left: 0;
+                width: 100%;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            }
+            nav ul.active {
+                display: flex; /* Show when active */
+            }
+            nav {
+                position: relative; /* For positioning menu-toggle */
+                padding: 1rem 0; /* Adjust padding for mobile nav area */
+            }
+            .menu-toggle {
+                display: block; /* Show hamburger on mobile */
+                position: static; /* Adjust positioning for within nav bar */
+                text-align: right; /* Align to the right */
+                padding-right: 2rem;
+                transform: translateY(0); /* Reset transform */
+            }
+            nav a {
+                padding: 0.7rem 1.2rem;
+                font-size: 1rem;
+                width: fit-content; /* Make links fit content */
+                margin: 0 auto; /* Center individual links */
+            }
+
+            .hero {
+                padding: 8rem 1.5rem;
+                min-height: 50vh;
+            }
+            .hero h2 {
+                font-size: 2.8rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
+                margin-bottom: 2.5rem;
+            }
+            .btn {
+                padding: 1rem 2.5rem;
+                font-size: 1.1rem;
+            }
+            h2 {
+                font-size: 2.2rem;
+                margin-bottom: 1.5rem;
+            }
+            section {
+                padding: 2.5rem 1.5rem;
+            }
+            .service-card, .why-choose-us .feature-item {
+                padding: 2rem;
+            }
+            .service-card i {
+                font-size: 3.5rem;
+            }
+            .service-card h3 {
+                font-size: 1.5rem;
+            }
+            .cta-box h3 {
+                font-size: 2rem;
+            }
+            .cta-box p {
+                font-size: 1.1rem;
+            }
+            .chip {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 1rem;
+            }
+            header h1 {
+                font-size: 2.5rem;
+            }
+            header .tagline {
+                font-size: 1rem;
+            }
+            .hero {
+                padding: 6rem 1rem;
+                min-height: 50vh;
+            }
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .btn {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            .service-card, .why-choose-us .feature-item {
+                padding: 1.5rem;
+            }
+            .service-card i {
+                font-size: 3rem;
+            }
+            .service-card h3 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Electrical Solutions</h1>
+        <p class="tagline">Powering Progress with Innovation & Expertise</p>
+        <p>Chaitra Rudraksha, Karad, Maharashtra</p>
+    </header>
+
+    <nav>
+        <div class="container">
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul id="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-choose-us">Why Choose Us</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero fade-in">
+            <div class="container text-center">
+                <h2>Empowering Your World with Smart Electrical & Automation</h2>
+                <p>We provide cutting-edge electrical services, innovative automation solutions, and reliable support for residential, commercial, and industrial clients across **Maharashtra**.</p>
+                <a href="#contact" class="btn">Get a Free Consultation Today</a>
+            </div>
+        </section>
+
+        <section id="services" class="fade-in">
+            <div class="container">
+                <h2>Our Comprehensive Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-home"></i>
+                        <h3>Home & Industrial Electrical</h3>
+                        <ul>
+                            <li>New wiring & re-wiring installations</li>
+                            <li>Electrical fault finding & emergency repairs</li>
+                            <li>MCB, DB box, smart meter installation</li>
+                            <li>Commercial & industrial wiring solutions</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-robot"></i>
+                        <h3>Automation & PLC Services</h3>
+                        <ul>
+                            <li>Siemens PLC programming (S7-1200, S7-1500)</li>
+                            <li>HMI/SCADA design & integration for control</li>
+                            <li>Custom industrial automation solutions</li>
+                            <li>Panel wiring & control system implementation</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-solar-panel"></i>
+                        <h3>Solar Power Solutions</h3>
+                        <ul>
+                            <li>Residential & commercial solar panel installation</li>
+                            <li>On-grid and off-grid solar system setup</li>
+                            <li>Solar inverter maintenance & repair</li>
+                            <li>Energy efficiency audits with solar integration</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-video"></i>
+                        <h3>CCTV & Security Systems</h3>
+                        <ul>
+                            <li>Residential & commercial CCTV installation</li>
+                            <li>IP camera and DVR/NVR setup</li>
+                            <li>Remote monitoring & mobile integration</li>
+                            <li>Security system upgrades and maintenance</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-drafting-compass"></i>
+                        <h3>AutoCAD Electrical Design</h3>
+                        <ul>
+                            <li>Precision electrical panel & wiring layouts</li>
+                            <li>Detailed electrical schematic drawings</li>
+                            <li>Bespoke AutoCAD services for projects</li>
+                            <li>As-built documentation & system diagrams</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>IoT & Smart Systems</h3>
+                        <ul>
+                            <li>Tailored IoT solutions with Arduino & ESP32</li>
+                            <li>Remote monitoring & control applications</li>
+                            <li>Smart energy management & billing systems</li>
+                            <li>Intrusion detection & smart security integration</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-tools"></i>
+                        <h3>Maintenance & Troubleshooting</h3>
+                        <ul>
+                            <li>Proactive machine & system maintenance</li>
+                            <li>Control panel diagnostics & upgrades</li>
+                            <li>Comprehensive electrical safety audits</li>
+                            <li>Rapid response fault diagnosis & repair</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-choose-us" class="fade-in">
+            <div class="container">
+                <h2>Why Choose Electrical Solutions?</h2>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto 2rem; color: var(--text-light);">
+                    We are dedicated to delivering exceptional value through unparalleled expertise, cutting-edge technology, and a commitment to client satisfaction.
+                </p>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <i class="fas fa-award"></i>
+                        <h3>Certified Expertise</h3>
+                        <p>Leveraging certified professionals and industry best practices for every project.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Innovation Driven</h3>
+                        <p>Pioneering smart and sustainable electrical and automation solutions.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-hands-helping"></i>
+                        <h3>Client Focused</h3>
+                        <p>Providing personalized service and transparent communication throughout.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Uncompromised Safety</h3>
+                        <p>Adhering to stringent safety protocols for secure and reliable installations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="fade-in">
+            <div class="container">
+                <h2>About Electrical Solutions</h2>
+                <p style="margin-bottom: 2.5rem; color: var(--text-light);">
+                    At **Electrical Solutions**, we are dedicated to powering progress across **Maharashtra**. With a commitment to innovation and unparalleled expertise, we deliver cutting-edge electrical and automation solutions tailored to your needs. Our mission is to ensure safe, efficient, and intelligent systems for every home, business, and industry we serve, built on a foundation of trust and technical excellence.
+                </p>
+
+                <div class="contact-info">
+                    <h3>Chaitra Rudraksha</h3>
+                    <p><strong>Phone:</strong> <a href="tel:8698908180">8698908180</a> | <strong>Email:</strong> <a href="mailto:rudrakshachaitra3@gmail.com">rudrakshachaitra3@gmail.com</a></p>
+                    <p><strong>Location:</strong> Karad, Maharashtra</p>
+                </div>
+
+                <h3>Education</h3>
+                <ul>
+                    <li>Diploma in Electrical Engineering</li>
+                    <li>ITI Certified Electrician</li>
+                </ul>
+
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li>Advanced Electrical wiring & installations</li>
+                    <li>Siemens PLC programming (TIA Portal, S7-300/400, S7-1200/1500)</li>
+                    <li>HMI/SCADA systems & comprehensive integration</li>
+                    <li>Arduino/ESP32 IoT development & cloud connectivity</li>
+                    <li>AutoCAD electrical control panel design & circuit drafting</li>
+                    <li>Industrial machine maintenance, diagnostics & troubleshooting</li>
+                    <li>Solar Power System Design & Installation</li>
+                    <li>CCTV and Security System Setup</li>
+                </ul>
+
+                <h3>Project Experience</h3>
+                <ul>
+                    <li>**Integrated Solar Power Solution for Residential Complex:** Designed and installed a grid-tied solar system, significantly reducing energy costs for residents.</li>
+                    <li>**GSM-based Smart Energy Meter:** Developed and deployed a smart energy meter with prepaid billing functionality, enhancing billing accuracy and convenience.</li>
+                    <li>**ESP32 Light Counting System:** Implemented an automated light counting system for efficient energy management in commercial spaces.</li>
+                    <li>**IoT Firebase Remote Control System:** Created an IoT-based system for remote monitoring and control of industrial processes, improving operational efficiency.</li>
+                    <li>**Advanced Theft Detection and Alert System:** Designed and installed a robust security system that provides real-time intrusion detection and alerts for enhanced property safety.</li>
+                    <li>**Integrated Industrial Automation:** Successfully automated manufacturing processes using Siemens PLC & HMI systems, boosting productivity and reliability.</li>
+                    <li>**Custom Motor Control Panel Design & Implementation:** Engineered and installed bespoke motor control panels for various manufacturing units, optimizing machinery performance.</li>
+                    <li>**CCTV Surveillance System for Commercial Building:** Provided end-to-end CCTV installation and configuration, ensuring comprehensive security coverage for the premises.</li>
+                </ul>
+
+                <h3>Certifications & Achievements</h3>
+                <ul>
+                    <li>Siemens Certified PLC Programmer (TIA Portal)</li>
+                    <li>AutoCAD Electrical Professional Certification</li>
+                    <li>Industrial IoT Specialist Certification</li>
+                    <li>Successfully completed 75+ automation and electrical projects</li>
+                    <li>Recognized for implementing significant energy efficiency solutions in 2022 & 2024</li>
+                    <li>Awarded "Best Emerging Electrical Contractor - Karad Region" 2023</li>
+                </ul>
+
+                <h3>Core Competencies</h3>
+                <div class="competencies">
+                    <span class="chip">Industrial Automation</span>
+                    <span class="chip">Smart Electrical Systems</span>
+                    <span class="chip">Solar Energy Integration</span>
+                    <span class="chip">CCTV & Security Solutions</span>
+                    <span class="chip">Energy Efficiency</span>
+                    <span class="chip">Process Optimization</span>
+                    <span class="chip">IoT Solutions</span>
+                    <span class="chip">Electrical Safety</span>
+                    <span class="chip">Project Management</span>
+                    <span class="chip">Client Consulting</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="fade-in">
+            <div class="container cta-box">
+                <h3>Ready to Power Your Next Project?</h3>
+                <p>Contact us today for a <span class="highlight">free consultation</span> and let's discuss how we can bring your electrical and automation visions to life.</p>
+                <a href="tel:8698908180" class="btn"><i class="fas fa-phone-alt"></i> Call Us Now!</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Electrical Solutions. All rights reserved. | Powered by Innovation</p>
+            <p>Designed and Maintained by Chaitra Rudraksha</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faders = document.querySelectorAll('.fade-in');
+
+            const appearOptions = {
+                threshold: 0.1, // Element is 10% in view
+                rootMargin: "0px 0px -50px 0px" // Start appearance a bit before it's fully in view
+            };
+
+            const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('appear');
+                        appearOnScroll.unobserve(entry.target);
+                    }
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+
+            // Mobile menu toggle
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navList = document.getElementById('nav-list');
+
+            mobileMenu.addEventListener('click', () => {
+                navList.classList.toggle('active');
+            });
+            // Close menu when a link is clicked
+            navList.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navList.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
